@@ -1,7 +1,8 @@
 import "./App.css";
+import RouterFactory from "./RouterFactory";
 
 function App() {
-  return <div className="App">테스트 페이지야야아아</div>;
+  return <RouterFactory />;
 }
 
 export default App;

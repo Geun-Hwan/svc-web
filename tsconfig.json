@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +14,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+
+    "paths": {
+      "@/*": ["./src/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@store/*": ["./src/store/*"],
+      "@tmp": ["./src/elements/templates/index.ts"],
+      "@cmp/*": ["./src/elements/components/*"],
+      "@atm": ["./src/elements/atoms/index.ts"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
