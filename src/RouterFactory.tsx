@@ -1,30 +1,40 @@
-import { RouteObject, RouterProvider } from "react-router"; // react-router에서 가져오기
-import { createBrowserRouter } from "react-router-dom";
-import { MainHomeTemplate, TestTemplate, TestTemplate2 } from "@tmp";
+import { JointTemplate, LoginTemplate, MainHomeTemplate } from "@tmp";
+import {
+  createBrowserRouter,
+  RouteObject,
+  RouterProvider,
+} from "react-router-dom";
 import PageLayout from "./layout/PageLayout";
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: <PageLayout title="메인 페이지야" />,
+    element: <PageLayout Header={() => <>메인페이지</>} />,
     children: [
       {
         path: "",
-        element: <MainHomeTemplate />,
+        Component: MainHomeTemplate,
       },
     ],
   },
   {
-    path: "test",
-    element: <PageLayout title="TEST 페이지 야" />,
+    path: "login",
+    element: <PageLayout Header={() => <>로그인페이지</>} />,
+
     children: [
       {
-        path: "1",
-        element: <TestTemplate />,
+        path: "",
+        Component: LoginTemplate,
       },
+    ],
+  },
+  {
+    path: "join",
+    element: <PageLayout Header={() => <>가입페이지</>} />,
+    children: [
       {
-        path: "2",
-        element: <TestTemplate2 />,
+        path: "",
+        Component: JointTemplate,
       },
     ],
   },

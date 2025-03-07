@@ -1,8 +1,5 @@
 import MainHomeTemplate from "./MainHomeTemplate";
-import TestTemplate from "./TestTemplate";
-import TestTemplate2 from "./TestTemplate2";
+import JointTemplate from "./JointTemplate";
+import LoginTemplate from "./LoginTemplate";
 
-export { MainHomeTemplate, TestTemplate, TestTemplate2 };
-
-// export { default as TestTemplate } from './TestTemplate';
-// export { default as MainHomeTemplate } from './MainHomeTemplate';
+export { MainHomeTemplate, JointTemplate, LoginTemplate };

@@ -1,10 +1,10 @@
-import React from "react";
+import { ComponentType } from "react";
 import { Outlet } from "react-router-dom";
 
-const PageLayout = ({ title }: { title: string }) => {
+const PageLayout = ({ Header }: { Header?: ComponentType }) => {
   return (
     <div>
-      <h1>{title}</h1>
+      {Header && <Header />}
       <div>
         <Outlet />
       </div>

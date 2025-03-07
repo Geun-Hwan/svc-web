@@ -1,0 +1,8 @@
+export const ACCEES_TOKEN = "acceesToken";
+
+export const CustomError = {
+  ACCESS_TOKEN_EXPIRED: "AUTH_ERROR1",
+  SESSION_EXPIRED: "AUTH_ERROR2",
+  PASSWORD_ERROR: "AUTH_ERROR3",
+  NO_DATA: "SVC_ERROR1",
+};
